@@ -1,7 +1,7 @@
 <launch>
     <arg name="veh" doc="Name of vehicle. ex: megaman"/> 
     <arg name="local" default="true" doc="true for running everything you possibly can on laptop. false for everything running on vehicle."/>
-    <arg name="graph_path" default="$(find cnn_lane_following)/src/movidius_graphs/graph.graph"/> 
+    <arg name="graph_path" default="$(find cnn_lane_following)/src/movidius_graphs/lane_following.graph"/> 
 
     <param name="~graph_path" value="$(arg graph_path)" type="string" />
 
