@@ -39,11 +39,11 @@ class CNN_lane_following:
         car_control_msg = duckietown_msgs.msg.Twist2DStamped()
         car_control_msg.header = img_msg.header
 
-        # adjust translation velocity to v=0.2 m/s which provides adequate time for predictions
+        # adjust translation velocity to v=0.25 m/s for smoother driving
         original_v = 0.386400014162
         original_omega = prediction
 
-        new_v = 0.2
+        new_v = 0.25
         new_omega = original_omega * new_v / original_v
 
         car_control_msg.v = new_v
